@@ -91,9 +91,6 @@ GhostWatch starts automatically when the system boots.
 └── 📁 systemd/
     └── ⚙️ ghostwatch.service
 
-
-
-
 ---
 
 ## 🔧 Installation
