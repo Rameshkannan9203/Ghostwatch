@@ -129,35 +129,40 @@ Enable Email Alerts? (y/n): y
 Sender Gmail: your@gmail.com
 Gmail App Password: abcd efgh ijkl mnop
 Recipient Email: alert-recipient@gmail.com
-📨 Telegram Alerts Setup
-Step 1 — Create a bot
+```
+
+## 📨 Telegram Alerts Setup
+
+### Step 1 — Create a bot
 Go to Telegram → Search BotFather
 Run command:
 
-bash
+```bash
 
 /newbot
 Receive BOT TOKEN.
 
-Step 2 — Get your Chat ID
+```
+### Step 2 — Get your Chat ID
 Start chat with myidbot
 Send:
 
-bash
+```bash
 
 /getid
 Bot replies with your Chat ID.
 
-Step 3 — Enter into GhostWatch
-yaml
+```
+
+### Step 3 — Enter into GhostWatch
+
+```yaml
 
 Enable Telegram Alerts? (y/n): y
 Bot Token: 123456789:ABCDEF
 Chat ID: 987654321
-🖼️ Screenshots
-Scan Output: scan.png
 
-Alerts Example: alerts.png
+```
 
 ⚙️ systemd Service
 ini
