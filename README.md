@@ -105,6 +105,9 @@ sudo cp systemd/ghostwatch.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable ghostwatch
 sudo systemctl start ghostwatch
+
+```
+
 📤 Email Alerts Setup (Gmail)
 Step 1 — Enable 2-Step Verification
 Go to: Google Security
@@ -146,8 +149,6 @@ yaml
 Enable Telegram Alerts? (y/n): y
 Bot Token: 123456789:ABCDEF
 Chat ID: 987654321
-🖼️ Screenshots (placeholders for GitHub)
-Main Menu: menu.png
 
 Scan Output: scan.png
 
