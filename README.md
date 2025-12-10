@@ -164,9 +164,9 @@ Chat ID: 987654321
 
 ```
 
-⚙️ systemd Service
-ini
+## ⚙️ systemd Service
 
+```ini
 [Unit]
 Description=GhostWatch Monitor
 After=network-online.target
@@ -184,7 +184,7 @@ DNS=8.8.8.8 1.1.1.1
 WantedBy=multi-user.target
 🧪 Example Output (Real Tool)
 text
-
+Copy code
 [+] Scanning 192.168.1.0/24...
 [+] Live: 192.168.1.10 (NEW DEVICE)
 [+] Online: 12 devices
@@ -212,17 +212,3 @@ Active Directory
 Defensive security
 
 Real-time alert engineering
-yaml
-
----
-
-### Why this works
-
-| Markdown | Effect |
-|----------|--------|
-| `##` | Big bold heading |
-| `###` | Sub-heading |
-| ```yaml``` | Formatted code block |
-| ```ini``` | Service file formatting |
-
----
