@@ -69,6 +69,7 @@ GhostWatch starts automatically when the system boots.
 ---
 
 ## 📁 Project Structure (GitHub Layout)
+```text
 📁 GhostWatch/
 │
 ├── 📄 ghostwatch.py
@@ -89,6 +90,7 @@ GhostWatch starts automatically when the system boots.
 │
 └── 📁 systemd/
     └── ⚙️ ghostwatch.service
+
 
 
 
