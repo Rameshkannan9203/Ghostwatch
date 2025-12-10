@@ -171,7 +171,8 @@ Chat ID: 987654321
 Description=GhostWatch Monitor
 After=network-online.target
 Wants=network-online.target
-
+ ```
+```ini
 [Service]
 ExecStart=/usr/bin/python3 /usr/bin/ghostwatch.py
 Environment="PYTHONUNBUFFERED=1"
@@ -180,35 +181,46 @@ RestartSec=5
 User=root
 DNS=8.8.8.8 1.1.1.1
 
+```
+```ini
 [Install]
 WantedBy=multi-user.target
-🧪 Example Output (Real Tool)
-text
-Copy code
+```
+## 🧪 Example Output (Real Tool)
+```yaml
+
 [+] Scanning 192.168.1.0/24...
 [+] Live: 192.168.1.10 (NEW DEVICE)
 [+] Online: 12 devices
 [+] Offline: 3 devices
 [+] Log saved → logs/new_devices.json
 [+] Email alert sent successfully.
-⚠️ Legal Disclaimer
-GhostWatch is intended only for:
 
-Your own LAN
+```
+## ⚠️ Legal Disclaimer
 
-Your own home / lab network
+### GhostWatch is intended only for:
 
-Your organization’s internal network where you have authorization
+```text
+* Your own LAN
 
-Unauthorized network monitoring is illegal. Only use GhostWatch where you have full permission.
+* Your own home / lab network
 
-💬 About the Developer
-Created for a Cybersecurity student learning:
+* Your organization’s internal network where you have authorization
 
-Network monitoring
+* Unauthorized network monitoring is illegal. Only use GhostWatch where you have full permission.
+```
 
-Active Directory
+## 💬 About the Developer
 
-Defensive security
+### Created for a Cybersecurity student learning:
 
-Real-time alert engineering
+```text
+* Network monitoring
+
+* Active Directory
+
+* Defensive security
+
+* Real-time alert engineering
+```
