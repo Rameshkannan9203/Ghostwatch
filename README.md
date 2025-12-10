@@ -69,26 +69,26 @@ GhostWatch starts automatically when the system boots.
 ---
 
 ## 📁 Project Structure (GitHub Layout)
-GhostWatch/
+📁 GhostWatch/
 │
-├── ghostwatch.py
-├── README.md
+├── 📄 ghostwatch.py
+├── 📄 README.md
 │
-├── screenshots/
-│   ├── menu.png
-│   ├── scan.png
-│   └── alerts.png
+├── 📁 screenshots/
+│   ├── 🖼️ menu.png
+│   ├── 🖼️ scan.png
+│   └── 🖼️ alerts.png
 │
-├── config/
-│   └── ghostwatch.json
+├── 📁 config/
+│   └── ⚙️ ghostwatch.json
 │
-├── logs/
-│   ├── online.json
-│   ├── offline.json
-│   └── new_devices.json
+├── 📁 logs/
+│   ├── 📄 online.json
+│   ├── 📄 offline.json
+│   └── 📄 new_devices.json
 │
-└── systemd/
-    └── ghostwatch.service
+└── 📁 systemd/
+    └── ⚙️ ghostwatch.service
 
 
 
