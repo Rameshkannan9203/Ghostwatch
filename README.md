@@ -108,26 +108,23 @@ sudo systemctl start ghostwatch
 
 ```
 
-📤 Email Alerts Setup (Gmail)
-Step 1 — Enable 2-Step Verification
-Go to: Google Security
-Enable 2-Step verification.
+## 📤 Email Alerts Setup (Gmail)
 
-Step 2 — Create an App Password
-Go to: Google App Passwords
+### Step 1 — Enable 2-Step Verification
+Go to: **Google Security**  
+Enable **2-Step verification**.
+
+### Step 2 — Create an App Password
+Go to: **Google App Passwords**  
 Select:
+- App: **Mail**
+- Device: **Your Computer**
 
-App: Mail
+Copy the **16-character password**.
 
-Device: Your Computer
+### Step 3 — Add into GhostWatch
 
-Copy the 16-character password.
-
-Step 3 — Add into GhostWatch
-Inside the tool:
-
-yaml
-
+```yaml
 Enable Email Alerts? (y/n): y
 Sender Gmail: your@gmail.com
 Gmail App Password: abcd efgh ijkl mnop
@@ -135,12 +132,20 @@ Recipient Email: alert-recipient@gmail.com
 📨 Telegram Alerts Setup
 Step 1 — Create a bot
 Go to Telegram → Search BotFather
-Run command: /newbot
+Run command:
+
+bash
+
+/newbot
 Receive BOT TOKEN.
 
 Step 2 — Get your Chat ID
-Start chat with: myidbot
-Send: /getid
+Start chat with myidbot
+Send:
+
+bash
+
+/getid
 Bot replies with your Chat ID.
 
 Step 3 — Enter into GhostWatch
@@ -149,7 +154,7 @@ yaml
 Enable Telegram Alerts? (y/n): y
 Bot Token: 123456789:ABCDEF
 Chat ID: 987654321
-
+🖼️ Screenshots
 Scan Output: scan.png
 
 Alerts Example: alerts.png
@@ -173,7 +178,7 @@ DNS=8.8.8.8 1.1.1.1
 [Install]
 WantedBy=multi-user.target
 🧪 Example Output (Real Tool)
-less
+text
 
 [+] Scanning 192.168.1.0/24...
 [+] Live: 192.168.1.10 (NEW DEVICE)
@@ -193,7 +198,7 @@ Your organization’s internal network where you have authorization
 Unauthorized network monitoring is illegal. Only use GhostWatch where you have full permission.
 
 💬 About the Developer
-Created for a Cybersecurity Student learning:
+Created for a Cybersecurity student learning:
 
 Network monitoring
 
@@ -202,6 +207,17 @@ Active Directory
 Defensive security
 
 Real-time alert engineering
+yaml
 
+---
 
+### Why this works
 
+| Markdown | Effect |
+|----------|--------|
+| `##` | Big bold heading |
+| `###` | Sub-heading |
+| ```yaml``` | Formatted code block |
+| ```ini``` | Service file formatting |
+
+---
