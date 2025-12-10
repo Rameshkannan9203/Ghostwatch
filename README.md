@@ -6,138 +6,107 @@ Real-time subnet monitoring, device presence alerts, email & Telegram notificati
 
 <p align="center"> <img src="https://dummyimage.com/600x200/111/00ffea&text=GHOSTWATCH+v3" /> </p> <p align="center"> <b>Version:</b> 3.0 • <b>Status:</b> Stable • <b>License:</b> Restricted Personal Use </p>
 <p align="center"> <img src="https://img.shields.io/badge/Python-3.8%2B-blue" /> <img src="https://img.shields.io/badge/Monitoring-LAN%20%2F%20Subnet-green" /> <img src="https://img.shields.io/badge/Alerts-Email%20%7C%20Telegram-orange" /> <img src="https://img.shields.io/badge/Startup-systemd-lightgrey" /> <img src="https://img.shields.io/badge/Security-Cybersecurity%20Student-success" /> </p>
-🔮 GhostWatch v3
-LAN Device Monitoring | Subnet Watcher | Alert Engine
+# 🔮 GhostWatch v3 LAN Device Monitoring | Subnet Watcher | Alert Engine
 
-GhostWatch v3 is a self-contained, legal, local-network monitoring system for:
+**GhostWatch v3** is a self-contained, legal, local-network monitoring system for:
 
-Active Directory labs
+- Active Directory labs  
+- Small office networks  
+- Home labs / cybersecurity labs  
+- Internal corporate mini-setups  
 
-Small office networks
+It **does not bypass security or perform unauthorized scanning**. Designed entirely for your own network.
 
-Home labs / cybersecurity labs
+---
 
-Internal corporate mini-setups
+## 📌 Features
 
-It does not bypass security or perform unauthorized scanning.
-Designed entirely for your own network.
+### Network Tools
+- **Whois lookup**  
+- **External / Local IP discovery**  
+- **Device fingerprinting**  
+- **CIDR range expanding**  
+- **ARP-based detection**  
+- **ICMP ping sweeps**  
 
-📌 Features
-1. Network Tools
-
-Whois lookup
-
-External / Local IP discovery
-
-Device fingerprinting
-
-CIDR range expanding
-
-ARP-based detection
-
-ICMP ping sweeps
-
-2. Single Device Monitor (With Alerts)
-
+### Single Device Monitor (With Alerts)
 GhostWatch can monitor a single IP or Device-ID and alert when:
 
-Device goes Online
+- Device goes **Online**  
+- Device goes **Offline**  
 
-Device goes Offline
+**Supports:**  
+- Alert Channel Status  
+  - Gmail Email Alerts: Yes  
+  - Telegram Alerts: Yes  
+  - JSON logging: Yes  
+  - TXT logs: Yes  
 
-Supports:
-
-Alert Channel	Status
-Gmail Email Alerts	Yes
-Telegram Alerts	Yes
-JSON logging	Yes
-TXT logs	Yes
-3. Subnet / Range Monitor
-
+### Subnet / Range Monitor
 You can monitor:
 
-192.168.1.0/24
+- `192.168.1.0/24`  
+- `10.0.0.1 – 10.0.0.254`  
+- Custom CIDR blocks  
 
-10.0.0.1 – 10.0.0.254
+**Functions:**  
+- Detect newly appeared devices  
+- Detect devices that went offline  
 
-Custom CIDR blocks
+**Save logs:**  
+- `online.json`  
+- `offline.json`  
+- `new_devices.json`  
 
-Functions:
+---
 
-Detect newly appeared devices
-
-Detect devices that went offline
-
-Save logs:
-
-online.json
-
-offline.json
-
-new_devices.json
-
-4. Auto-Start on Boot (systemd)
-
-Service file:
-
-/etc/systemd/system/ghostwatch.service
-
+## ⚙️ Auto-Start on Boot (systemd)
+Service file location:  
+`/etc/systemd/system/ghostwatch.service`  
 
 GhostWatch starts automatically when the system boots.
 
-📁 Project Structure (GitHub Layout)
+---
+
+## 📁 Project Structure (GitHub Layout)
 GhostWatch/
-│
 ├── ghostwatch.py
 ├── README.md
 ├── screenshots/
-│   ├── menu.png
-│   ├── scan.png
-│   ├── alerts.png
-│
+│ ├── menu.png
+│ ├── scan.png
+│ ├── alerts.png
 ├── config/
-│   ├── ghostwatch.json
-│
+│ └── ghostwatch.json
 ├── logs/
-│   ├── online.json
-│   ├── offline.json
-│   ├── new_devices.json
-│
+│ ├── online.json
+│ ├── offline.json
+│ └── new_devices.json
 └── systemd/
-    └── ghostwatch.service
+└── ghostwatch.service
 
-🔧 Installation
-1. Clone the repository
+bash
+
+---
+
+## 🔧 Installation
+
+```bash
 git clone https://github.com/yourusername/GhostWatch.git
 cd GhostWatch
-
-2. Make executable
 chmod +x ghostwatch.py
-
-3. Install to /usr/bin
 sudo mv ghostwatch.py /usr/bin/ghostwatch
-
-4. Install systemd service
 sudo cp systemd/ghostwatch.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable ghostwatch
 sudo systemctl start ghostwatch
-
 📤 Email Alerts Setup (Gmail)
 Step 1 — Enable 2-Step Verification
-
-Go to:
-https://myaccount.google.com/security
-
-Enable:
-
-2-Step verification
+Go to: Google Security
+Enable 2-Step verification.
 
 Step 2 — Create an App Password
-
-Go to:
-https://myaccount.google.com/apppasswords
-
+Go to: Google App Passwords
 Select:
 
 App: Mail
@@ -147,63 +116,41 @@ Device: Your Computer
 Copy the 16-character password.
 
 Step 3 — Add into GhostWatch
-
 Inside the tool:
+
+yaml
 
 Enable Email Alerts? (y/n): y
 Sender Gmail: your@gmail.com
 Gmail App Password: abcd efgh ijkl mnop
 Recipient Email: alert-recipient@gmail.com
-
 📨 Telegram Alerts Setup
 Step 1 — Create a bot
-
-Go to Telegram → Search:
-
-BotFather
-
-
-Run command:
-
-/newbot
-
-
-You receive:
-
-BOT TOKEN: 123456789:ABCDEF...
+Go to Telegram → Search BotFather
+Run command: /newbot
+Receive BOT TOKEN.
 
 Step 2 — Get your Chat ID
-
-Start chat with:
-
-https://t.me/myidbot
-
-
-Send:
-
-/getid
-
-
-Bot replies:
-
-Your Chat ID: 987654321
+Start chat with: myidbot
+Send: /getid
+Bot replies with your Chat ID.
 
 Step 3 — Enter into GhostWatch
+yaml
+
 Enable Telegram Alerts? (y/n): y
 Bot Token: 123456789:ABCDEF
 Chat ID: 987654321
-
 🖼️ Screenshots (placeholders for GitHub)
-Main Menu
-![Menu](screenshots/menu.png)
+Main Menu: menu.png
 
-Scan Output
-![Scan](screenshots/scan.png)
+Scan Output: scan.png
 
-Alerts Example
-![Alerts](screenshots/alerts.png)
+Alerts Example: alerts.png
 
 ⚙️ systemd Service
+ini
+
 [Unit]
 Description=GhostWatch Monitor
 After=network-online.target
@@ -219,17 +166,16 @@ DNS=8.8.8.8 1.1.1.1
 
 [Install]
 WantedBy=multi-user.target
-
 🧪 Example Output (Real Tool)
+less
+
 [+] Scanning 192.168.1.0/24...
-[+] Live: 192.168.1.10  (NEW DEVICE)
+[+] Live: 192.168.1.10 (NEW DEVICE)
 [+] Online: 12 devices
 [+] Offline: 3 devices
 [+] Log saved → logs/new_devices.json
 [+] Email alert sent successfully.
-
 ⚠️ Legal Disclaimer
-
 GhostWatch is intended only for:
 
 Your own LAN
@@ -238,13 +184,9 @@ Your own home / lab network
 
 Your organization’s internal network where you have authorization
 
-You acknowledge that:
-
-Unauthorized network monitoring is illegal.
-Only use GhostWatch where you have full permission.
+Unauthorized network monitoring is illegal. Only use GhostWatch where you have full permission.
 
 💬 About the Developer
-
 Created for a Cybersecurity Student learning:
 
 Network monitoring
@@ -254,3 +196,6 @@ Active Directory
 Defensive security
 
 Real-time alert engineering
+
+
+
